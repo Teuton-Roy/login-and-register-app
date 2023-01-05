@@ -1,0 +1,36 @@
+.register{
+    width: 400px;
+    /* height: 35vh; */
+    background-color: aliceblue;
+    border: 1px solid #dddfe2;
+    box-shadow: 0 10px 40px rgb(0 0 0 / 100%), 0 10px 25px rgb(0 0 0 / 10%);
+    border-radius: 10px;
+    padding: 1 rem;
+    align-items: center;
+    text-align: center;
+}
+
+.register > input{
+    border-radius: 100px;
+    border: 2px solid #dddfe2;
+    outline: none;
+    color: #1d2129;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0.75rem;
+    width: 90%;
+    font-size: 1rem;
+}
+
+.register > .button{
+    border-radius: 10px;
+    background-color: #1877f2;
+    border:0.5px solid #1877f2;
+    outline: none;
+    color: white;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    padding: 0.5rem 1rem;
+    outline: none;
+    cursor: pointer;
+}
+
