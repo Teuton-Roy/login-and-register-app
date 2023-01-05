@@ -4,7 +4,7 @@ import "./homepage.css"
 const Homepage = () => {
     return (
         <div className="homepage">
-            <h2>Hello Bitch!</h2>
+            <h2>Hello World</h2>
             <div className="button">
                 Logout
             </div>
