@@ -1,5 +1,7 @@
 import React , {useState} from "react";
 import "./register.css";
+//API Call package//
+import axios from "axios";
 
 const Register = () => {
 
@@ -21,7 +23,11 @@ const Register = () => {
         })
     }
 
-
+    //handle submit//
+    const signup = () => {
+        // e.preventDefault();
+        const {name, email, password} = user;
+    }
 
 
     return (
@@ -48,7 +54,7 @@ const Register = () => {
 
 
             {/* button for login */}
-            <div className="button">Signup</div>
+            <div className="button" onClick={signup}>Signup</div>
             
             <div>Or</div>
 
