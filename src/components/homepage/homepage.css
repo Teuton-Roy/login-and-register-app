@@ -22,3 +22,21 @@
     outline: none;
     cursor: pointer;
 }
+
+.homepage > .button:hover{
+    background-color: #0e5ac0;
+    border: #0e5ac0;
+}
+
+marquee{
+    background-color: black;
+    color: whitesmoke;
+    display: flex;
+    margin: 0.5rem;
+    box-shadow: 0 0 1px 0 black;
+    border-radius: 20px;
+}
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
