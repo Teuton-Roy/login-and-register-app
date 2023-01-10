@@ -1,6 +1,9 @@
 import React, {useState} from "react";
 import "./login.css";
 import axios from "axios";
+//import useHistory react-dom v6//
+// import {useHistory} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
 
@@ -27,7 +30,8 @@ const Login = () => {
     }
 
 
-
+    //useHistory//
+    const navigate = useNavigate();
 
 
 
@@ -54,10 +58,24 @@ const Login = () => {
             <div>Or</div>
 
             {/* button for Register */}
-            <div className="button">Register</div>
+            <div className="button" onClick={( () => navigate("/register"))}>Register</div>
 
         </div>
     );
 }
 
 export default Login;
+
+
+/*
+    In react-router-dom v6, useHistory is replaced by useNavigate.
+    useNavigate is a hook that returns a function to navigate to a new location.
+    It's a replacement for the history object that was passed to components in v5.
+    //how to imoprt//
+    import { useNavigate } from "react-router-dom";
+
+    //syntax of useNavigate//
+    const navigate = useNavigate();
+    onclick{(() => navigate("/"))}
+*/
+
