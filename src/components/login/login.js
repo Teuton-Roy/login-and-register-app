@@ -40,7 +40,7 @@ import { useNavigate } from "react-router-dom";
     return (
         <div className="login">
 
-            {console.log("User", user)}
+            {/* {console.log("User", user)} */}
 
             <h1>Login</h1>
 

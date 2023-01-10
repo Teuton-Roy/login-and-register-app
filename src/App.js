@@ -29,17 +29,12 @@ function App() {
           <Route exact path="/" element={
             //conditional rendering//
             user && user._id ? 
-            <Homepage/> : 
+            <Homepage setLoginUser={setLoginUser}/> : 
             <Login setLoginUser={setLoginUser}/>
-
           }/>
 
         </Routes>
       </Router>
-
-      {/* <Homepage />
-      <Login />
-      <Register /> */}
     </div>
   );
 }
