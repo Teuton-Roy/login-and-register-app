@@ -1,8 +1,8 @@
 import React, {useState} from "react";
 import "./login.css";
 import axios from "axios";
-//import useHistory react-dom v6//
-// import {useHistory} from "react-router-dom";
+//import useNavigate react-dom v6//
+// import {useHistory} from "react-router-dom"; used in v5
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
