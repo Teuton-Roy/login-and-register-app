@@ -21,7 +21,7 @@ function App() {
 
           <Route exact path="/register" element={<Register/>} />
 
-          <Route path="/" element={<Homepage/>}/>
+          <Route exact path="/" element={<Homepage/>}/>
 
         </Routes>
       </Router>
@@ -35,6 +35,8 @@ function App() {
 
 export default App;
 
+
+
 /*
   In react-router-dom v6, "Switch" is repleaced by "Routes".so we need to update the import from
     import {BrowserRouter as Router, Switch, Route} from "react-router-dom"; to ==>
@@ -45,7 +47,7 @@ export default App;
       <Routes>
         <Route exact path="/login" element={<Login/>}/>
         <Route exact path="/register" element={<Register/>} />
-        <Route path="/" element={<Homepage/>}/>
+        <Routeexact  path="/" element={<Homepage/>}/>
       </Routes>
     </Router>
 */
