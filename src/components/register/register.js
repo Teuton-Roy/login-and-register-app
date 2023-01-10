@@ -7,10 +7,10 @@ const Register = () => {
 
     //use state//
     const [user, setUser] = useState({
-        Name:" ",
-        email:" ",
-        password:" ",
-        reEnterPassword:" "
+        Name:"",
+        email:"",
+        password:"",
+        reEnterPassword:""
     })
 
 
@@ -26,11 +26,19 @@ const Register = () => {
     //handle submit//
     const signup = () => {
         // e.preventDefault();
-        const {name, email, password} = user;
+        const {Name, email, password,reEnterPassword} = user
+        if(Name && email && password && (password === reEnterPassword)){
+            axios.post("http://localhost:5000/signup", user)
+            .then(res => console.log(res))
+            // alert("posted")
+        }
+        else{
+            alert("Invalid!")
+        }
     }
 
 
-    return (
+    return ( 
         <div className="register">
 
             {/* {console.log("User", user)} */}

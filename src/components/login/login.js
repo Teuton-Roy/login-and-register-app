@@ -1,13 +1,14 @@
 import React, {useState} from "react";
 import "./login.css";
+import axios from "axios";
 
 const Login = () => {
 
 
     //use State//
     const [user, setUser] = useState({
-        email:" ",
-        password:" ",
+        email:"",
+        password:"",
     })
 
     //handel change//
@@ -19,6 +20,11 @@ const Login = () => {
         })
     }
 
+    //handel submit//
+    const login = () => {
+        axios.post("http://localhost:5000/login", user)
+        .then(res => console.log(res))
+    }
 
 
 
@@ -35,7 +41,7 @@ const Login = () => {
 
             {/* input form for email */}
             {/* <label htmlFor="">Email</label> */}
-            <input type="text" placeholder="Enter your Email" onChange={handleChange} name="email" value={user.email} />
+            <input type="text" placeholder="Enter college your email_id" onChange={handleChange} name="email" value={user.email} />
             
             {/* input form for password  */}
             {/* <label htmlFor="">Password</label> */}
@@ -43,7 +49,7 @@ const Login = () => {
 
 
             {/* button for login */}
-            <div className="button">Login</div>
+            <div className="button" onClick={login}>Login</div>
             
             <div>Or</div>
 
