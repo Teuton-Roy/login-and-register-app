@@ -1,5 +1,5 @@
 //import all components//
-
+import React, {useState} from "react";
 import './App.css'
 
 import Homepage from "./components/homepage/homepage"
@@ -11,17 +11,28 @@ import { BrowserRouter as Router,Routes, Route} from "react-router-dom";
 
 
 function App() {
+  //  Create a user object if login successfull then go to Homepage//
+
+  const [user, setLoginUser] = useState({})
+
+
   return (
     <div className="App">
 
       <Router>
         <Routes>
 
-          <Route exact path="/login" element={<Login/>}/>
+          <Route path="/login" element={<Login setLoginUser={setLoginUser}/>}/>
 
           <Route exact path="/register" element={<Register/>} />
 
-          <Route exact path="/" element={<Homepage/>}/>
+          <Route exact path="/" element={
+            //conditional rendering//
+            user && user._id ? 
+            <Homepage/> : 
+            <Login setLoginUser={setLoginUser}/>
+
+          }/>
 
         </Routes>
       </Router>

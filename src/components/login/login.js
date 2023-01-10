@@ -5,7 +5,7 @@ import axios from "axios";
 // import {useHistory} from "react-router-dom"; used in v5
 import { useNavigate } from "react-router-dom";
 
-const Login = () => {
+  const Login = ({setLoginUser}) => {
 
 
     //use State//
@@ -26,14 +26,16 @@ const Login = () => {
     //handel submit//
     const login = () => {
         axios.post("http://localhost:5000/login", user)
-        .then(res => alert(res.data.message))
+        .then(res => {
+            alert(res.data.message)
+            setLoginUser(res.data.user)
+            navigate("/")
+        })
     }
 
 
     //useHistory//
     const navigate = useNavigate();
-
-
 
     return (
         <div className="login">
