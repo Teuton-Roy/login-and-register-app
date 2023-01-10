@@ -23,7 +23,7 @@ const Login = () => {
     //handel submit//
     const login = () => {
         axios.post("http://localhost:5000/login", user)
-        .then(res => console.log(res))
+        .then(res => alert(res.data.message))
     }
 
 
@@ -34,7 +34,7 @@ const Login = () => {
     return (
         <div className="login">
 
-            {/* {console.log("User", user)} */}
+            {console.log("User", user)}
 
             <h1>Login</h1>
 
