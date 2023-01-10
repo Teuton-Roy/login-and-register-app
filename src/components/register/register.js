@@ -2,6 +2,8 @@ import React , {useState} from "react";
 import "./register.css";
 //API Call package//
 import axios from "axios";
+//import useNavigate//
+import { useNavigate } from "react-router-dom";
 
 const Register = () => {
 
@@ -37,6 +39,8 @@ const Register = () => {
         }
     }
 
+    //useNavigate//
+    const navigate = useNavigate();
 
     return ( 
         <div className="register">
@@ -67,7 +71,7 @@ const Register = () => {
             <div>Or</div>
 
             {/* button for Register */}
-            <div className="button">Login</div>
+            <div className="button" onClick={(() => navigate("/login"))}>Login</div>
 
         </div>
     );
