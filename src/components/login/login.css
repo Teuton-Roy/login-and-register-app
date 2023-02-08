@@ -33,3 +33,9 @@
     outline: none;
     cursor: pointer;
 }
+
+.login > .button:hover{
+    background-color: #0e5ac0;
+    border:0.5px solid #0e5ac0;
+}
+

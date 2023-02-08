@@ -38,29 +38,35 @@ import { useNavigate } from "react-router-dom";
     const navigate = useNavigate();
 
     return (
-        <div className="login">
+        <div className="mar">
 
-            {/* {console.log("User", user)} */}
+            <marquee direction="lr"><a target="_blank" href="https://github.com/Teuton-Roy">Wellcome to my github account</a></marquee>
 
-            <h1>Login</h1>
+            <div className="login">
 
+                {/* {console.log("User", user)} */}
 
-            {/* input form for email */}
-            {/* <label htmlFor="">Email</label> */}
-            <input type="text" placeholder="Enter college your email_id" onChange={handleChange} name="email" value={user.email} />
-            
-            {/* input form for password  */}
-            {/* <label htmlFor="">Password</label> */}
-            <input type="password" placeholder="Enter your password" onChange={handleChange} name="password" value={user.password} />
+                <h1>Login</h1>
 
 
-            {/* button for login */}
-            <div className="button" onClick={login}>Login</div>
-            
-            <div>Or</div>
+                {/* input form for email */}
+                {/* <label htmlFor="">Email</label> */}
+                <input type="text" placeholder="Enter college your email_id" onChange={handleChange} name="email" value={user.email} />
+                
+                {/* input form for password  */}
+                {/* <label htmlFor="">Password</label> */}
+                <input type="password" placeholder="Enter your password" onChange={handleChange} name="password" value={user.password} />
 
-            {/* button for Register */}
-            <div className="button" onClick={( () => navigate("/register"))}>Register</div>
+
+                {/* button for login */}
+                <div className="button" onClick={login}>Login</div>
+                
+                <div>Or</div>
+
+                {/* button for Register */}
+                <div className="button" onClick={( () => navigate("/register"))}>Register</div>
+
+            </div>
 
         </div>
     );
