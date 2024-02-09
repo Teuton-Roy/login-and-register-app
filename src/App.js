@@ -1,14 +1,12 @@
 //import all components//
 import React, {useState} from "react";
 import './App.css'
-
 import Homepage from "./components/homepage/homepage"
 import Login from "./components/login/login"
 import Register from "./components/register/register"
 //import react-dom//
 import { BrowserRouter as Router,Routes, Route} from "react-router-dom";
 // import { Routes ,Route } from 'react-router-dom';
-
 
 function App() {
   //  Create a user object if login successfull then go to Homepage//
